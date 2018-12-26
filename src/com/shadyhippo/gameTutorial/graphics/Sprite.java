@@ -16,13 +16,13 @@ public class Sprite {
 	public static Sprite rock1 = new Sprite(16, 2, 2, SpriteSheet.tiles);
 	public static Sprite lava0 = new Sprite(16, 3, 0, SpriteSheet.tiles);
 	public static Sprite lava1 = new Sprite(16, 3, 2, SpriteSheet.tiles);
-	public static Sprite voidSprite0 = new Sprite(16, 0x000000); 
+	public static Sprite voidSpace = new Sprite(16, 0x000000); 
 
 	public static Sprite[] grass = {grass0, grass1};
 	public static Sprite[] water = {water0, water1};
 	public static Sprite[] rock = {rock0, rock1};
 	public static Sprite[] lava = {lava0, lava1};
-	public static Sprite[] voidSprite = {voidSprite0};
+	public static Sprite[] voidSprite = {voidSpace};
 	
 
 	//player

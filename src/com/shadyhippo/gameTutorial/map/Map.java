@@ -41,7 +41,7 @@ public class Map {
 		for (int y = y0; y < y1; y++) {
 			for (int x = x0; x < x1; x++) {
 				if (x < 0 || y < 0 || x >= width || y >= height) Tile.voidTile.renderTile(x, y, screen, spriteIndex);
-				tiles[x + y * width].renderTile(x, y, screen, spriteIndex);;
+				else tiles[x + y * width].renderTile(x, y, screen, spriteIndex);
 			}
 		}
 	}
