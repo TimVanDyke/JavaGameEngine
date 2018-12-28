@@ -16,7 +16,7 @@ import com.shadyhippo.gameTutorial.input.Keyboard;
 import com.shadyhippo.gameTutorial.map.Map;
 import com.shadyhippo.gameTutorial.map.RandomMap;
 import com.shadyhippo.gameTutorial.map.SpawnMap;
-
+//test
 public class Game extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
 	
