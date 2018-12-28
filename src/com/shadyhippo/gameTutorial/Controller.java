@@ -16,7 +16,7 @@ import com.shadyhippo.gameTutorial.input.Keyboard;
 import com.shadyhippo.gameTutorial.map.Map;
 import com.shadyhippo.gameTutorial.map.SpawnMap;
 //test
-public class Game extends Canvas implements Runnable {
+public class Controller extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
 	
 	public static int width = 16 * 19;
@@ -37,7 +37,7 @@ public class Game extends Canvas implements Runnable {
 	private BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 	private int[] pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
 	
-	public Game() {
+	public Controller() {
 		Dimension size = new Dimension(width * scale, height * scale);
 		setPreferredSize(size);
 		
@@ -143,7 +143,7 @@ public class Game extends Canvas implements Runnable {
 	}
 	
 	public static void main(String[] args) {
-		Game game = new Game();
+		Controller game = new Controller();
 		game.frame.setResizable(true);
 		game.frame.add(game);
 		game.frame.pack();
