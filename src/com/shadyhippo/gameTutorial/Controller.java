@@ -14,7 +14,7 @@ import com.shadyhippo.gameTutorial.entity.mob.Player;
 import com.shadyhippo.gameTutorial.graphics.Screen;
 import com.shadyhippo.gameTutorial.input.Keyboard;
 import com.shadyhippo.gameTutorial.map.Map;
-import com.shadyhippo.gameTutorial.map.SpawnMap;
+import com.shadyhippo.gameTutorial.map.LoadedMap;
 //test
 public class Controller extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
@@ -46,7 +46,7 @@ public class Controller extends Canvas implements Runnable {
 		frame = new JFrame();
 		frame.setTitle(title);
 		key = new Keyboard();
-		map = new SpawnMap("/textures/map.png");
+		map = new LoadedMap("/textures/map.png");
 		player = new Player(256, 256, key);
 		addKeyListener(key);
 		clock = 0;

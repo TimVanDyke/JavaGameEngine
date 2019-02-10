@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class SpawnMap extends Map {
+public class LoadedMap extends Map {
 	
 	//the ol' map color codes for map building. These colors correspond to different tiles
 	private static int green = 0xFF519B5D;
@@ -16,23 +16,23 @@ public class SpawnMap extends Map {
 	//for the picture load in
 	private int[] mapPixels;
 	
-	public SpawnMap(String path) {
+	public LoadedMap(String path) {
 		super(path);
 	}
 	
 	protected void loadMap(String path) {
 		try {
-			BufferedImage image = ImageIO.read(SpawnMap.class.getResource(path));
+			BufferedImage image = ImageIO.read(LoadedMap.class.getResource(path));
 			width = image.getWidth();
 			height = image.getHeight();
-			tiles = new Tile[width * height];
+			terrainMap = new Tile[width * height];
+			entityMap = new int[width * height];
 			mapPixels = new int[width * height];
 			image.getRGB(0, 0, width, height, mapPixels, 0, width);
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("REEEEEEEEEEEEEEEEEEEEEEEE YOU BROKE LEVEL INTAKE IN SpriteSheet");
 		}
-		
 	}
 
 	/*
@@ -43,10 +43,10 @@ public class SpawnMap extends Map {
 	 */
 	protected void generateMap() {
 		for(int i = 0; i < mapPixels.length; i++) {
-			if (mapPixels[i] == green) tiles[i] = Tile.grass;
-			if (mapPixels[i] == blue) tiles[i] = Tile.water;
-			if (mapPixels[i] == brown) tiles[i] = Tile.rock;
-			if (mapPixels[i] == orange) tiles[i] = Tile.lava;
+			if (mapPixels[i] == green) terrainMap[i] = Tile.grass;
+			if (mapPixels[i] == blue) terrainMap[i] = Tile.water;
+			if (mapPixels[i] == brown) terrainMap[i] = Tile.rock;
+			if (mapPixels[i] == orange) terrainMap[i] = Tile.lava;
 		}
 	}
 }

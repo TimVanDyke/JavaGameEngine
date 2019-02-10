@@ -16,13 +16,13 @@ public class RandomMap extends  Map {
 			for (int x = 0; x < width; x++) {
 				int num = random.nextInt(4);
 				if (num == 0) {
-					tiles[x + y * height] = Tile.grass;
+					terrainMap[x + y * height] = Tile.grass;
 				}else if (num == 1) {
-					tiles[x + y * height] = Tile.water;
+					terrainMap[x + y * height] = Tile.water;
 				}else if (num == 2) {
-					tiles[x + y * height] = Tile.rock;
+					terrainMap[x + y * height] = Tile.rock;
 				}else if (num == 3) {
-					tiles[x + y * height] = Tile.lava;
+					terrainMap[x + y * height] = Tile.lava;
 				} 
 			}
 		}
