@@ -34,7 +34,7 @@ public class LoadedMap extends Map {
 			System.out.println("REEEEEEEEEEEEEEEEEEEEEEEE YOU BROKE LEVEL INTAKE IN SpriteSheet");
 		}
 	}
-
+ 
 	/*
 	 * green is grass
 	 * blue is water
